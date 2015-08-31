@@ -8,14 +8,16 @@
 	<div class="row">
 		<div class="col-sm-12 col-md-12 col-lg-12">
 		 {{#each proyectos}}
-  <div class="col-sm-6 col-md-4">
+  <div class="col-sm-6 col-md-4 proyecto">
     <a href="#"><div class="thumbnail ">
       <img src="/img/default-image-thumb.svg" alt="...">
       <div class="caption">
         <h3>{{nombre}}</h3>
         <p>{{descripcion}}</p>
         <h6>{{ultimamodificacion}}</h6>
-        <h6>{{idcliente}}</h6>
+        {{#with data idcliente}}
+        <h6 class="idc">{{profile.nombre}}</h6>
+        {{/with}}
          <div class="progress">
   <div class="progress-bar" role="progressbar" aria-valuenow="{{progreso}}" aria-valuemin="0" aria-valuemax="100" style="width: {{progreso}}%;">
     {{progreso}}%

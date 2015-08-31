@@ -15,6 +15,5 @@ alanning:roles
 zimme:active-route
 utilities:avatar
 matteodem:easy-search
-yogiben:autoform-file
 cfs:standard-packages
-ccorcos:transitioner
+cfs:filesystem

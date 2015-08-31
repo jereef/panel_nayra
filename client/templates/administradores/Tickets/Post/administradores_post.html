@@ -1,19 +1,33 @@
 <template name="administradoresPost">
 {{#each consultas}}
-  <div class="panel-heading">{{profile.nombre}}</div>
+{{#with data usuario}}
+ <div class="panel-body"><p>{{profile.nombre}}</p></div>
+{{/with}}
+ <ul class="list-group">
+    <li class="list-group-item">Titulo:{{tema}}</li>
+    <li class="list-group-item">Servicio:{{servicio}}</li>
+    <li class="list-group-item">{{descripcion}}</li>  
+  </ul>
 {{/each}}
+
+
+{{#each comentarios}}
+  <ul class="list-group">
+    {{#with data idusuario}}
+    <li class="list-group-item">{{profile.nombre}}</li>
+    {{/with}}
+<li class="list-group-item">{{texto}}</li>
+<li class="list-group-item">{{date}}</li>
+  </ul>
+{{/each}}
+
   
 
-  <div class="panel-body">
-    <p>...</p>
-  </div>
-
-  <ul class="list-group">
-    <li class="list-group-item">Cras justo odio</li>
-    <li class="list-group-item">Dapibus ac facilisis in</li>
-    <li class="list-group-item">Morbi leo risus</li>
-    <li class="list-group-item">Porta ac consectetur ac</li>
-    <li class="list-group-item">Vestibulum at eros</li>
-  </ul>
-
+ <form>
+       <div class="form-group">
+        <label for="password">Comentario:</label>
+        <input type="text" class="form-control" id="texto" name="texto" placeholder="comentario">
+      </div>
+     <input type="submit" value="Enviar" class="btn btn-primary"/>
+    </form>
 </template>
