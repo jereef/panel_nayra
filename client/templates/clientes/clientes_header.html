@@ -1,0 +1,9 @@
+<template name="clientesHeader">
+   	<ul class="nav nav-sidebar">
+  <li  class="{{isActiveRoute regex='clienteHome' className='active'}}" role="presentation"><a href="{{pathFor 'clienteHome'}}"><i class="fa fa-home"></i>   Home</a></li>
+  <li  class="{{isActiveRoute regex='clienteServicios' className='active'}}" role="presentation"><a href="{{pathFor 'clienteServicios'}}"><i class="fa fa-server"></i>   Proyectos</a></li>
+  <li  class="{{isActiveRoute regex='clientePagos' className='active'}}" role="presentation"><a href="{{pathFor 'clientePagos'}}"><i class="fa fa-dollar"></i>   Pagos y Facturas</a></li>
+  <li  class="{{isActiveRoute regex='cclienteMesa' className='active'}}" role="presentation"><a href="{{pathFor 'clienteMesa'}}"><i class="fa fa-comments-o"></i>   Mesa de Ayuda</a></li>
+  <li  class="{{isActiveRoute regex='clienteTienda' className='active'}}" role="presentation"><a href="{{pathFor 'clienteTienda'}}"><i class="fa fa-shopping-cart"></i>   Tienda</a></li>
+</ul>
+</template>

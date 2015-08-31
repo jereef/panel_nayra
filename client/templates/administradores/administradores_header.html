@@ -1,0 +1,10 @@
+<template name="administradoresHeader">
+         	<ul class="nav nav-sidebar">
+  <li class="{{isActiveRoute regex='administradoresMain' className='active'}}" role="presentation"><a href="{{pathFor 'administradoresMain'}}"><i class="fa fa-home"></i> Home</a></li>
+  <li class="{{isActiveRoute regex='administradoresClientes' className='active'}}" role="presentation"><a href="{{pathFor 'administradoresClientes'}}"><i class="fa fa-group"></i> Clientes</a></li>
+  <li class="{{isActiveRoute regex='administradoresProyectos' className='active'}}" role="presentation"><a href="{{pathFor 'administradoresProyectos'}}"><i class="fa fa-server"></i> Proyectos</a></li>
+  <li role="presentation"><a href="{{pathFor 'administradoresFacturas'}}"><i class="fa fa-dollar"></i> Facturas</a></li>
+  <li role="presentation"><a href="{{pathFor 'administradoresTickets'}}"><i class="fa fa-ticket"></i> Tickets</a></li>
+  <li role="presentation"><a href="{{pathFor 'administradoresTienda'}}"><i class="fa fa-shopping-cart"></i> Tienda</a></li>
+</ul>
+</template>

@@ -1,0 +1,65 @@
+<template name="clientePerfil">
+	<div class="panel panel-default">
+  <div class="panel-heading">{{currentUser.username}}</div>
+  <div class="panel-body">
+
+   <div class="col-md-12">
+    <form>
+
+      <div class="form-group">
+        <label for="nombre">Usuario</label>
+        <input type="text" class="form-control" id="username" name="username" value="{{currentUser.username}}" placeholder="{{currentUser.username}}">
+      </div>
+
+      <div class="form-group">
+        <label for="nombre">Nombre</label>
+        <input type="text" class="form-control" id="nombre" name="nombre" value="{{currentUser.profile.nombre}}" placeholder="{{currentUser.profile.nombre}}">
+      </div>
+
+       <div class="form-group">
+        <label for="apellido">Apellido</label>
+        <input type="text" class="form-control" id="apellido" name="apellido" value="{{currentUser.profile.apellido}}" placeholder="{{currentUser.profile.apellido}}">
+      </div>
+
+       <div class="form-group">
+        <label for="fechadenacimiento">Fecha de Nacimiento</label>
+        <input type="text" class="form-control" id="fechadenacimiento" name="fechadenacimiento" value="{{currentUser.profile.fechadenacimiento}}" placeholder="{{currentUser.profile.fechadenacimiento}}">
+      </div>
+
+       <div class="form-group">
+        <label for="direccion">Direccion</label>
+        <input type="text" class="form-control" id="direccion" name="direccion" value="{{currentUser.profile.direccion}}" placeholder="{{currentUser.profile.direccion}}">
+      </div>
+
+       <div class="form-group">
+        <label for="codigopostal">Codigo Postal</label>
+        <input type="text" class="form-control" id="codigopostal" name="cp" value="{{currentUser.profile.cp}}" placeholder="{{currentUser.profile.cp}}">
+      </div>
+
+       <div class="form-group">
+        <label for="ciudad">Ciudad</label>
+        <input type="text" class="form-control" id="ciudad" name="ciudad" value="{{currentUser.profile.ciudad}}" placeholder="{{currentUser.profile.ciudad}}">
+      </div>
+
+       <div class="form-group">
+        <label for="provincia">Provincia</label>
+        <input type="text" class="form-control" id="provincia" name="provincia" value="{{currentUser.profile.provincia}}" placeholder="{{currentUser.profile.provincia}}">
+      </div>
+
+
+       <div class="form-group">
+        <label for="email">Email</label>
+        <input type="text" class="form-control" id="email" name="email" value="{{currentUser.emails}}" placeholder="{{currentUser.emails}}">
+      </div>
+
+       <div class="form-group">
+        <label for="telefono">Telefono</label>
+        <input type="text" class="form-control" id="telefono" name="telefono" value="{{currentUser.profile.telefono}}" placeholder="{{currentUser.profile.telefono}}">
+      </div>
+     <input type="submit" value="Enviar" class="btn btn-primary"/>
+    </form>
+  </div>
+
+</div>
+</div>
+</template>	

@@ -1,0 +1,52 @@
+<template name="administradoresClientes">
+<form class="navbar-form navbar-left" role="search">
+
+       {{> esInput class="buscar" index="users" placeholder="Buscar..." }}
+        <button type="submit" class="btn btn-default"><i class="fa fa-search"></i></button>
+      </form>
+      <button class="btn btn-default" onclick="location.href='{{pathFor 'administradoresClientesAgregar'}}'"><i class="fa fa-user-plus"></i></button>
+     <table class="table table-striped table-hover">
+       <thead>
+         <tr>
+           <th>Nombre</th>
+           <th>Direccion</th>
+           <th>CP</th>
+           <th>Ciudad</th>
+           <th>Provincia</th>
+           <th>Email</th>
+           <th>Telefono</th>
+         </tr>
+       </thead>
+       <tbody class="defaulttable">
+         {{#each users}}
+        <tr> 
+       <td>{{profile.nombre}} {{profile.apellido}}</td>
+       <td>{{profile.direccion}}</td>
+       <td>{{profile.cp}}</td>
+       <td>{{profile.ciudad}}</td>
+       <td>{{profile.provincia}}</td>
+       <td>{{emails.[0].address}}</td>
+       <td>{{profile.telefono}}</td>
+       <td><button class="btn btn-success btn-xs update" data-name="{{profile.nombre}}" data-id="{{_id}}"><i class="fa fa-pencil"></i></button></td>
+        <td><button class="btn btn-danger btn-xs delete"  data-name="{{profile.nombre}}" data-id="{{_id}}"><i class="fa fa-remove"></i></button></td>
+         </tr>
+           {{/each}}
+       </tbody>
+       <tbody>
+        {{#esEach index="users"}}
+        <tr>
+          <td>{{profile.nombre}} {{profile.apellido}}</td>
+       <td>{{profile.direccion}}</td>
+       <td>{{profile.cp}}</td>
+       <td>{{profile.ciudad}}</td>
+       <td>{{profile.provincia}}</td>
+       <td>{{emails.[0].address}}</td>
+       <td>{{profile.telefono}}</td>
+       <td><button class="btn btn-success btn-xs update" data-name="{{profile.nombre}}" data-id="{{_id}}"><i class="fa fa-pencil"></i></button></td>
+        <td><button class="btn btn-danger btn-xs delete"  data-name="{{profile.nombre}}" data-id="{{_id}}"><i class="fa fa-remove"></i></button></td>
+         </tr>
+        {{/esEach}}
+       </tbody>
+
+     </table>
+</template>

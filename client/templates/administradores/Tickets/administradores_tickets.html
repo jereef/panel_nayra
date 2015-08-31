@@ -1,0 +1,23 @@
+<template name="administradoresTickets">
+ <table class="table table-striped table-hover">
+       <thead>
+         <tr>
+           <th>Tema</th>
+           <th>Descripcion</th>
+           <th>Estado</th>
+           <th>Servicio</th>
+         </tr>
+       </thead>
+       <tbody class="defaulttable consulta">
+         {{#each consultas}}
+        <tr> 
+       <td>{{tema}}</td>
+       <td>{{descripcion}}</td>
+       <td>{{estado}}</td>
+       <td>{{servicio}}</td>
+       <td> <button type="button" class="btn btn-default responder" data-id="{{_id}}">Responder</button></td>
+         </tr>
+           {{/each}}
+       </tbody>
+     </table>
+</template>

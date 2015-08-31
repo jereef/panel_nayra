@@ -1,0 +1,65 @@
+<template name="clienteMesa">
+
+<div class="col-md-6">
+    <form>
+       <div class="form-group">
+            <label for="nombre">Tema:</label>
+            <input type="text" class="form-control" id="tema" name="tema" value="" placeholder="Tema">
+    </div>
+
+   <div class="form-group">
+		<label for="nombre">Servicio:</label>
+
+  		<select name="servicio">
+        <option selected="" value="">Seleccioná un servicio</option>
+    		{{#each servicios}}<option>{{nombre}}</option>{{/each}}
+  		</select>
+	</div>
+    <div class="form-group">
+        <label for="nombre">Descripcion</label>
+        <input type="text" class="form-control" id="descripcion" name="descripcion" value="" placeholder="Descripción">
+	</div>
+
+    <div class=" form-group">
+    	<label for="nombre">Adjuntar archivo:</label>
+      <div class="input-group">
+      <input type="text" class="form-control" placeholder="Buscar ...">
+      <span class="input-group-btn">
+        <button class="btn btn-default" type="button">Seleccionar</button>
+      </span>
+      </div>
+    </div>
+    <div class="form-group">
+            <label for="nombre">Enviar uan copia de la respues al siguiente mail:</label>
+            <input type="text" class="form-control" id="mail" name="mail" value="" placeholder="Mail">
+    </div>
+
+     <input type="submit" value="Enviar" class="btn btn-primary "/>
+    </form>
+</div>
+
+<div class="col-md-6">
+   <table class="table table-striped table-hover">
+       <thead>
+         <tr>
+           <th>Tema</th>
+           <th>Descripcion</th>
+           <th>Estado</th>
+           <th>Servicio</th>
+         </tr>
+       </thead>
+       <tbody class="defaulttable consulta">
+         {{#each consultas}}
+        <tr> 
+       <td>{{tema}}</td>
+       <td>{{descripcion}}</td>
+       <td>{{estado}}</td>
+       <td>{{servicio}}</td>
+         </tr>
+           {{/each}}
+       </tbody>
+     </table>
+</div>
+
+
+</template>
