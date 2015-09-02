@@ -4,6 +4,7 @@ Meteor.subscribe("directory");
 Meteor.subscribe('servicios');
 Meteor.subscribe('consultas');
 Meteor.subscribe('comentarios');
+Meteor.subscribe('facturas');
 
 Transitioner.transition({
     fromRoute: 'administradoresClientes',
