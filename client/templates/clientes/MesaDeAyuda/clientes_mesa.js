@@ -28,6 +28,5 @@ Template.clienteMesa.events({
 
 Template.clienteMesa.events({
 	'click tr': function(e,t) {
-
-		alert("dasdad");
+Router.go('clientePost',{_id:$(e.target).closest('.responder').data('id')})
 	}})

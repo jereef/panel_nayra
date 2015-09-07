@@ -1,4 +1,4 @@
-Template.administradoresPost.helpers({
+Template.clientePost.helpers({
 consultas: function() {
 	  return Consultas.find({_id: Router.current().params._id});
 	},
@@ -16,7 +16,7 @@ comentario: function(consulta) {
 }
 
 });
-Template.administradoresPost.events({
+Template.clientePost.events({
 	'submit form': function(e) {
 
 		
