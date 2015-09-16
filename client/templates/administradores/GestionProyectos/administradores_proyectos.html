@@ -10,7 +10,9 @@
 		 {{#each proyectos}}
   <div class="col-sm-6 col-md-4 proyecto">
     <a href="#"><div class="thumbnail ">
-      <img src="/img/default-image-thumb.svg" alt="...">
+{{#with FS.GetFile "uploads" idimagen}}
+      <img src="../uploads/{{copies.uploads.key}}" alt="..." width="200">
+{{/with}}
       <div class="caption">
         <h3>{{nombre}}</h3>
         <p>{{descripcion}}</p>
@@ -20,7 +22,7 @@
         {{/with}}
          <div class="progress">
   <div class="progress-bar" role="progressbar" aria-valuenow="{{progreso}}" aria-valuemin="0" aria-valuemax="100" style="width: {{progreso}}%;">
-    {{progreso}}%
+    {{progreso}}% 
   </div>
 </div>
       </div>

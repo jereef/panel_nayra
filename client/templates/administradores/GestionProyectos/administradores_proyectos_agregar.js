@@ -1,7 +1,6 @@
+var idimagenactual;
 Template.administradoresProyectosAgregar.events({
 	'submit form': function(e) {
-
-		
 		e.preventDefault();
 
 		var proyecto = {
@@ -9,6 +8,7 @@ Template.administradoresProyectosAgregar.events({
 			descripcion: $(e.target).find('[name=descripcion]').val(),
 			//ultimamodificacion: ultimamodificaicon,
 			idcliente: $(e.target).find(':selected').val(),
+			idimagen: idimagenactual,
 			progreso: "0"
 		};
 			Proyectos.insert(proyecto);
@@ -21,6 +21,7 @@ Template.administradoresProyectosAgregar.events({
 			Uploads.insert(fileObj, function(err){
 				console.log(err);
 			})
+			idimagenactual = fileObj._id;
 		})
 	}
 
@@ -32,5 +33,4 @@ Template.administradoresProyectosAgregar.helpers({
 		return Meteor.users.find();
 
 	}
-
 });

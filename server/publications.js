@@ -17,5 +17,9 @@ Meteor.publish('comentarios', function() {
   return Comentarios.find();
 });
 Meteor.publish('facturas', function() {
-  return Comentarios.find();
+  return Facturas.find();
 });
+Meteor.publish('uploads', function() {
+  return Uploads.find();
+});
+

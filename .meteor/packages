@@ -17,3 +17,4 @@ utilities:avatar
 matteodem:easy-search
 cfs:standard-packages
 cfs:filesystem
+cfs:ui
