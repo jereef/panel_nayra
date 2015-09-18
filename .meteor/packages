@@ -18,3 +18,5 @@ matteodem:easy-search
 cfs:standard-packages
 cfs:filesystem
 cfs:ui
+pascoual:pdfkit
+classcraft:meteor-wkhtmltopdf
