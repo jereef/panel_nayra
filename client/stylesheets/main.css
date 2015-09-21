@@ -165,3 +165,19 @@ margin-right: 10px;
 .main .page-header {
   margin-top: 0;
 }
+.title-section{
+    border-bottom: 1px #D3D3D3 solid;
+}
+.title-section h5{
+  font-size: 24px;
+}
+.vistas-section ul{
+list-style: none;
+}
+.vistas-section ul li{
+  display: inline;
+  margin-right: 5px;
+}
+.vistas-section ul li.active{
+  color:#909090;
+}
