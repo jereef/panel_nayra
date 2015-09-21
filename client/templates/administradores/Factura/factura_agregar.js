@@ -1,3 +1,0 @@
-Template.facturasPost.helpers({
-
-})
