@@ -1,16 +1,13 @@
 <template name="administradoresFacturas">
-
-
-	<div class="col-md-6">
-
-
-
-<div class="col-md-6">
-
+<div class="col-md-12">
 <form class="navbar-form navbar-left " role="search">
  {{> esInput class="buscar" index="users" placeholder="Buscar..." }}
  <button type="submit" class="btn btn-default"><i class="fa fa-search"></i></button>
 </form>
+</div>
+
+<div class="col-md-6">
+
 <table class="table table-striped table-hover">
   <thead>
     <tr>
@@ -27,49 +24,13 @@
       <td>{{profile.direccion}}</td>
       <td>{{emails.[0].address}}</td>
       <td>{{profile.telefono}}</td>
-      <td><button type="button" class="btn btn-primary btn-lg " data-toggle="modal" data-target="#myModal" data-id="{{_id}}">Ver facturas</button></td>
+      <td><button type="button" class="btn btn-primary btn-lg filtrar " data-toggle="modal" data-target="#myModal" data-id="{{_id}}">Ver Servicion/Proyectos</button></td>
     </tr>
     {{/each}}
-  </tbody>
-
-  <tbody>
-    {{#esEach index="users"}}
-    <tr>
-      <td>{{profile.nombre}} {{profile.apellido}}</td>
-      <td>{{profile.direccion}}</td>
-      <td>{{emails.[0].address}}</td>
-      <td>{{profile.telefono}}</td>
-      <td><button type="button" class="btn btn-primary " data-toggle="modal" data-target="#myModal" data-id="{{_id}}">Ver facturas</button></td>
-    </tr>
-    {{/esEach}}
   </tbody>
 </table>
+
 </div>
-
-
-<div class="col-md-6">
-  <table class="table table-striped table-hover">
-    <thead>
-      <tr>
-        <th>Servicio/Productos</th>
-        <th>Fecha de vencimiento</th>
-        <th>Importe</th>
-      </tr>
-    </thead>
-    <tbody class="defaulttable consulta">
-    {{#each consultas}}
-      <tr> 
-       <td>{{tema}}</td>
-       <td>{{descripcion}}</td>
-       <td>{{estado}}</td>
-       <td>{{servicio}}</td>
-       <td> <button type="button" class="btn btn-default responder" id="popup" data-id="">Ver detalle</button></td>
-      </tr>
-    {{/each}}
-    </tbody>
-  </table>
-</div> 
-
 
 
 
@@ -85,9 +46,7 @@
        <thead>
          <tr>
            <th>Nombre</th>
-           <th>Direccion</th>
-           <th>Email</th>
-           <th>Telefono</th>
+           <th>Diescripcion</th>
          </tr>
        </thead>
        <tbody class="defaulttable">
@@ -95,8 +54,7 @@
         <tr> 
        <td>{{nombre}}</td>
        <td>{{descripcion}}</td>
-       <td>{{profile.telefono}}</td>
-       <td><button type="button" class="btn btn-primary " data-toggle="modal2" data-target="#myModal" data-id="{{_id}}">Agregar factura</button></td>
+       <td><button class="btn btn-default agregar" data-name="{{nombre}}" data-id="{{_id}}" data-dismiss="modal">Agregar</button></td>
         </tr>
            {{/each}}
        </tbody>
@@ -110,10 +68,6 @@
     </div>
   </div>
 </div>
-  </div>
-
-
-
 
 
 </template>
