@@ -168,16 +168,86 @@ margin-right: 10px;
 .title-section{
     border-bottom: 1px #D3D3D3 solid;
 }
+.vistas-section{
+  text-align: right;
+}
+.vistas-section ul li a i {
+  padding-top: 17px;
+}
 .title-section h5{
   font-size: 24px;
 }
 .vistas-section ul{
 list-style: none;
+float:right;
+margin-left: 0px;
+margin-right: 0px;
+padding-left: 10px;
 }
-.vistas-section ul li{
+.vistas-section ul li {
   display: inline;
   margin-right: 5px;
 }
-.vistas-section ul li.active{
+.vistas-section ul li a{
+  color:#28292D;
+}
+.vistas-section ul li.active a{
   color:#909090;
 }
+.vistas-section ul li.separator{
+  color:#909090;
+}
+.search-section form{
+  padding-left: 3px;
+  background-color:white;
+  height: 20px;
+  width: 180px;
+  padding-top: 2px;
+  border-radius: 2px;
+  display: inline;
+  float:right;
+  margin-right:0px;
+  margin-left:0px;
+  transition: all 2s;
+}
+.search-section form input.buscar{
+border:2px white solid;
+border-radius: 2px;
+padding-left: 10px;
+margin-right: 1px;
+background-color:white;
+color:#28292D;
+}
+.search-section form input.buscar:focus{
+outline: none !important;
+    border:0px solid red;
+    box-shadow: 0 0 0px #719ECE;
+    color:#909090;
+}
+.search-section form input.buscar:active{
+ color:#909090; 
+}
+.search-section form input.buscar:focus::-webkit-input-placeholder{
+ color:transparent;
+ transition: all 0.3s;
+}
+.search-section form input.buscar::-webkit-input-placeholder{
+  color:#28292D;
+}
+
+.search-section form a i{
+  color:#28292D;
+}
+
+.buttons-section{
+
+  padding-top: 10px;
+
+}
+table thead.table-clientes tr th{
+  padding-bottom: 17px;
+}
+table thead.table-clientes tr th.button{
+  padding-bottom: 10px;
+}
+
