@@ -1,8 +1,7 @@
 <template name="layout">
     {{> header}}
-    <div class="container-fluid">
-    <div class="row">
-    <div class="col-sm-4 col-md-2 sidebar">
+    <div id="wrapper">
+    <div id="sidebar-wrapper">
       {{#if isInRole 'cliente' }}
       	{{> clientesHeader}}
       {{/if}}
@@ -10,9 +9,12 @@
       	{{> administradoresHeader}}
       {{/if}}
     </div>
-    <div class="col-sm-9 col-sm-offset-3 col-md-10 col-md-offset-2 main">
+    <div id="page-content-wrapper">
+      <div class="container-fluid">
+         <div class="row">
       {{> yield}}
     </div>
   </div>
+    </div>
   </div>
 </template>

@@ -16,19 +16,23 @@
       </form>
 </div>
 </div>
-</div>
+
 <div class="col-md-12 sub-var">
 <div class="col-md-12 buttons-section">
+  <ul>
+    <li><button class="btn btn-danger" onclick="location.href='{{pathFor 'administradoresClientesAgregar'}}'"><i class="fa fa-user-plus"></i> Crear Cliente</button></li>
+     <li><button class="btn btn-primary"><i class="fa fa-upload"></i> Importar Clientes</button></li>
+  </ul>
 
 </div>
 
 </div>
-
+</div>
 <div class="col-md-12 sub-var">
      <table class="table table-striped table-hover">
        <thead class="table-clientes">
          <tr>
-           <th class="button"><button class="btn btn-danger" onclick="location.href='{{pathFor 'administradoresClientesAgregar'}}'"><i class="fa fa-user-plus"></i> Crear Cliente</button></th>
+           <th>Nombre</th>
            <th>Direccion</th>
            <th>CP</th>
            <th>Ciudad</th>
